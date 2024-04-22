@@ -1,0 +1,19 @@
+# Solicitar ao usuário que insira o ano
+ano = int(input("Digite o ano: "))
+
+# Função para o cálculo do ano bissexto
+def eh_bissexto(ano):
+    if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+        return True
+    else:
+        return False
+
+# Verificar se o ano é bissexto, e retornar ao usuário á resposta correta
+if eh_bissexto(ano):
+    print(f"O ano {ano} é bissexto, pois atende às seguintes condições:")
+    print("- É divisível por 4;")
+    print("- Não é divisível por 100, exceto se também for divisível por 400.")
+    print("Portanto, possui 366 dias.")
+else:
+    print(f"O ano {ano} não é bissexto, pois não atende às condições para ser bissexto.")
+    print("Portanto, possui 365 dias.")
